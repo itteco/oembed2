@@ -1,6 +1,6 @@
-1. Iframely intro for Businesses
+# 1. Iframely intro for Businesses
 
-1.1 The Cause
+## 1.1 The Cause
 
 The purpose of Iframely protocol is to help open web take the next step by making it possible 
 for the web content to follow user from website to website. 
@@ -21,7 +21,7 @@ or devices the users opted to communicate on.
 Inspired by _John Borthwick's article on Open Web_. 
 
 
-1.2 The Business Case
+## 1.2 The Business Case
 
 There are three main business models around content at the moment. 
 
@@ -47,7 +47,7 @@ to find a balance between viral distribution versus acquiring and retaining cust
 _Read the full spec_
 
 
-1.3. The oEmbed/2
+## 1.3. The oEmbed/2
 
 The protocol's roots are in oEmbed v1, published in 2008. 
 
@@ -66,7 +66,7 @@ and consuming widgets on the web in current realities (HTML5, CSS3, HTTP1.1).
 _Read the full spec_
 
 
-1.4 QA & Whitelist
+## 1.4 QA & Whitelist
 
 During Itteco's research and development effort with existing embeds and semantic protocols, 
 we got a clear indication that the lack of centralized Quality Assurance for embeds is what is 
