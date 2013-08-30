@@ -8,6 +8,7 @@ Content consumer selects the widgets that work for the user's environment and pr
 
 Thus, the widgets are always hosted by a publisher, yet interpreted by consumer. 
 This forces parties to put their best effort to collaborate on acceptable user experience for their shared audience.
+
 See _Intro for Businesses in Section 1_.
 
 The protocol references HTML5/CSS3 and will naturally evolve with those standards from a technical standpoint.
@@ -21,16 +22,16 @@ This document and changes to it are managed on [GitHub](https://github.com/ittec
 
 Discovery is expected to happen when publisher puts <link> tag in the head of their webpage:
 
- <link rel="iframely player"                        // intended use case
- type="text/html"                                   // embed as iFrame
- href="//iframe.ly/bFbn"                            // with this src
- media="(min-width:100) and (min-height:100)"       // when these sizes are ok
- title="Open Web FTW!" />
+    <link rel="iframely player"                        // intended use case
+    type="text/html"                                   // embed as iFrame
+    href="//iframe.ly/bFbn"                            // with this src
+    media="(min-width:100) and (min-height:100)"       // when these sizes are ok
+    title="Open Web FTW!" />
 
 ## 2.2. Example of embed code
 The above link on the publisher's web page would be used to generate the following embed code on consumer's site:
 
- <iframe src="//iframe.ly/bFbn" width="100%" height="100%"></iframe>
+    <iframe src="//iframe.ly/bFbn" width="100%" height="100%"></iframe>
 
 ## 2.3 `rel`
 The supported use cases shall be listed in `rel` attributes, separated by a space, in no specific order.
@@ -71,7 +72,7 @@ An example of simple media query is fixed `aspect-ratio`, or anything that relie
 
 ## 2.7 `sizes` 
 `sizes` attribute can be used instead of `media` for fixed-size embeds: 
- <link rel="iframely thumbnail" sizes="800x600" type="image/png" href="//domain.com/thumbnail.png"/>
+    <link rel="iframely thumbnail" sizes="800x600" type="image/png" href="//domain.com/thumbnail.png"/>
 
 See [sizes spec on W3C](http://www.w3schools.com/tags/att_link_sizes.asp).
 
