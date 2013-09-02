@@ -34,7 +34,7 @@ The above link on the publisher's web page would be used to generate the followi
     <iframe src="//iframe.ly/bFbn" width="100%" height="100%"></iframe>
 
 ## 2.3 `rel`
-The supported use cases shall be listed in `rel` attributes, separated by a space, in no specific order.
+The supported use cases of published widget shall be listed in `rel` attributes, separated by a space, in no specific order.
 
 The initial dictionary of the use cases is listed in _Rel Types_ section:
 `iframely`, `player`, `reader`, `image`, `survey`, `thumbnail`, `icon`, `logo`
@@ -68,7 +68,7 @@ Consumer apps would require extensive programming to cover all variety of querie
 thus making complex queries a high risks of not being interpreted well and thus reducing distribution of content for publishers.
 
 An example of simple media query is fixed `aspect-ratio`, or anything that relies on `min-` and `max-` of `height` and `width`.
- media="(aspect-ratio: 4:3)"
+    media="(aspect-ratio: 4:3)"
 
 ## 2.7 `sizes` 
 `sizes` attribute can be used instead of `media` for fixed-size embeds: 
@@ -85,14 +85,12 @@ For example, `logo` can have the same title on all pages on your site and be equ
 However, if the `link` represents the same content but with different variations in use case or media sizes, 
 it is expected that such multiple links would share the same `title`.
 
+If `tittle` attribute is omitted, the title should be considered to value in `<title>...</title>` HTML tag of the web page.
+
 
 # 3. Example
 
 Coub Example
-
-# 4. Error Handling
-
-# 5. Security considerations
 
 
 # 6. Community
@@ -113,13 +111,14 @@ Here are the companies who have helped us verify the protocol by being Iframely 
  - News & Experiences. [#iframely](https://twitter.com/search?q=iframely&src=typd&mode=realtime) or [@iframely](https://twitter.com/iframely) on Twitter
  
 ## 6.2 Contributing
+
 Please, feel free to [fork this document](https://github.com/itteco/oembed2) on GitHub or [submit an issue](https://github.com/itteco/oembed2/issues/new). 
 We suggest that all new `rels` and MIME `types` first go via discussion in a ticket.
 
-## 6.3 Open-source implementations
-
--  Iframely the Embeds Gateway - provides single self-hosted API endpoint to consume iframely, oEmbed, Twitter Cards and Open Graph protocols.
--  Iframely Embeds QA Whitelist - providers independent quality data for domains implementing iframely, oEmbed, Twitter Cards and Open Graph 
+## 6.3 Useful links
+ -  [Iframely the Embeds Gateway](http://iframely.com/gateway) - provides single self-hosted API endpoint to consume iframely, oEmbed, Twitter Cards and Open Graph protocols.
+ -  [Iframely Embeds QA Whitelist](http://iframely.com/qa) - providers independent quality data for domains implementing iframely, oEmbed, Twitter Cards and Open Graph 
+ -  [Iframely Debug Tool](http://iframely.com/debug) - debugs 4 embeds protocols
 
 # 7. Authors & License
 
