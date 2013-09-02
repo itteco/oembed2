@@ -44,7 +44,7 @@ The general requirements and recommendations for players are similar to
  - Publishers can specify iframe widgets (`type="text/html"`), Flash (`application/x-shockwave-flash:`), or any of `video/...` or `audio/...` MIME types, but are encouraged to provide multiple links if they support multiple formats so that consumers may choose for user's device and network characteristics.
  - Publishers should add `autoplay` value to the `rel` list, if their widget starts the media playback on load of the widget. 
  - Publishers should add `mature` value to the `rel` list, if the widget contains mature subject matter.
- - The use of HTTPS is optional (yet recommended). However, when source widget is hosted under HTTPS URI, the requirements are the same as for Twitter Player Card.
+ - The use of HTTPS is optional (yet recommended for better distribution). However, when source widget is hosted under HTTPS URI, the requirements are the same as for Twitter Player Card.
 
  
 Example of [Coub](http://coub.com) publishing [player](http://coub.com/view/2pc24rpb):
@@ -78,7 +78,7 @@ However, it is expected that other MIME types be required in near future. (See h
 
 ## `survey`
 
-`survey` rel is for widgets asking an opinion of the user. 
+`survey` rel is for widgets asking user's opinion. 
 
 The questionnaire should give sufficient context and load in a widget step-by-step so that user can spend as little time on answering the poll.
 
