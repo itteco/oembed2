@@ -1,6 +1,6 @@
 # Iframely Rel Use Cases
 
-    <link rel="player"                                 // intended use case
+    <link rel="player"                                 // intended list of use cases
     type="text/html"                                   // embed as iFrame
     href="//iframe.ly/bFbn"                            // with this src
     media="(min-width:100) and (min-height:100)"       // when these sizes are ok

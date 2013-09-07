@@ -20,13 +20,17 @@ This document and changes to it are managed on [GitHub](https://github.com/ittec
 
 ## Publishing & Discovery
 
-Discovery is expected to happen when publisher puts <link> tag in the head of their webpage:
+Discovery is expected to happen when publisher puts number of `<link>` tags in the head of their webpage:
 
-    <link rel="iframely player"                        // intended use case
+    <link rel="iframely player"                        // intended list of use cases
     type="text/html"                                   // embed as iFrame
     href="//iframe.ly/bFbn"                            // with this src
     media="(min-width:100) and (min-height:100)"       // when these sizes are ok
     title="Open Web FTW!" />
+
+The publisher may specify the number of links, either for various user experience of the same content, or links for multiple contents on the page. 
+
+The consumer (maybe with user's explicit choice) selects what links to use, given the other users' technological and functional context.
 
 ## Example of embed code
 The above link on the publisher's web page would be used to generate the following embed code on consumer's site:
