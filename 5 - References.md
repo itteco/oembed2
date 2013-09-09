@@ -43,7 +43,7 @@ The following folks and companies helped with feedback and validation of the con
 - Anatoly Ivanov built the 3rd reincarnation of [Iframely Open-Source Gateway](http://github.com/itteco/iframely) (we ended up releasing the 4rth incarnation of it)
 - [Mathias Panzenböck](https://github.com/panzi) and his [CrowdRanking](http://crowdranking.com/) was the first publisher under Iframely protocol (even ahead of [us ourselves](http://iframe.ly))
 - [Jon Cianciullo](https://twitter.com/jonnyjon/) helped validate some ideas.
-- [Taras Kuba](https://twitter.com/gonzar) is our brilliant designer, who added a lot of the design requirements and tendencies for future.
+- [Taras Kuba](https://twitter.com/taraskuba) is our brilliant designer, who added a lot of the design requirements and tendencies for future.
 - [Coub](http://coub.com), [SocialMention](http://socialmention.com), [realtidbits](http://realtidbits.com), [PandaDoc](http://pandadoc.com) and [SlimSurveys](http://slimsurveys.com) helped the ball rolling by being our launch partners.
 
 
