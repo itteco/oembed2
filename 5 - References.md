@@ -34,12 +34,13 @@ The ideas for Iframely protocol were influenced by these publications since we s
 - [oEmbed](http://oembed.com) spec / 2008
 - [Open Graph](http://ogp.me) by Facebook and RDFa approach in general / 2011
 - [Twitter Cards](https://dev.twitter.com/docs/cards/types/player-card) spec / 2012
+- [EmbedLink](https://sites.google.com/site/embedlink/home) proposal by Brian Mearns was in line with what we were working on, though we don't agree that oEmbed is considered harmful, but rather a question of proper [whitelist](http://iframely.com/qa) / 2013
 
 
 The following folks and companies helped with feedback and validation of the concepts:
 
 - [Nowork FM](http://nowork.fm) - [Itteco](http://itteco.com)'s simple intranet, we opted to build to immerse ourselves in all requirements of embeds Consumer
-- Anatoly Ivanov built the 3rd re-incornation of [Iframely Open-Source Gateway](http://github.com/itteco/iframely) (we ended up releasing the 4rth incornation of it)
+- Anatoly Ivanov built the 3rd reincarnation of [Iframely Open-Source Gateway](http://github.com/itteco/iframely) (we ended up releasing the 4rth incarnation of it)
 - [Mathias Panzenböck](https://github.com/panzi) and his [CrowdRanking](http://crowdranking.com/) was the first publisher under Iframely protocol (even ahead of [us ourselves](http://iframe.ly))
 - [Jon Cianciullo](https://twitter.com/jonnyjon/) helped validate some ideas.
 - [Taras Kuba](https://twitter.com/gonzar) is our brilliant designer, who added a lot of the design requirements and tendencies for future.
