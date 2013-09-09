@@ -1,41 +1,68 @@
-# Iframely Protocol
+# Iframely Protocol for Responsive Embeds
 
-Iframely protocol is simple embeds content publishing and discovery method that is naturally 
-interpreted into widget embed code by developers of consuming application. 
+Iframely protocol is simple publishing and discovery method for responsive embeds of web content. 
 
-Content publisher announces what widgets are available on a web page, in which format and which sizes and what are the expected use cases. 
-Content consumer selects the widgets that work for the user's environment and presents it to the user. 
+- Content widgets are always hosted and controled by Publisher. 
+- Consumer app interprets and presents embeds to User, giving the experience circumstances. 
+- This clear separation of responsibilities balances Publisher and Consumer objectives. It forces them to work together to provide best user experience to their shared audience. See [Business Intro](http://iframely.com/oembed2/intro)
 
-Thus, the widgets are always hosted by a publisher, yet interpreted by consumer. 
-This forces parties to put their best effort to collaborate on acceptable user experience for their shared audience.
+Iframely protocol does not compete with specs of [oEmbed](http://oembed.com), [Open Graph](http://opg.me) or [Twitter Cards](http://https://dev.twitter.com/docs/cards), but rather supplements them, as it only focuses on User Experience and not on semantic data. 
 
-See _Intro for Businesses in Section 1_.
+This is how it works:
+ - Content Publisher puts available widgets as `<link>` tag in the `<head>` section of (X)HTML document. Publisher indicates MIME type of a hosted resource, sizing options and what are the expected use cases. 
+ - Consumer selects the widgets that work for the user's environment and app circumstances and presents it to the user. 
 
 The protocol references HTML5/CSS3 and will naturally evolve with those standards from a technical standpoint.
 
 This document and changes to it are managed on [GitHub](https://github.com/itteco/oembed2).
 
 
-# Spec
 
-## Publishing & Discovery
+## Publish and Discover Embeds - via `<link>` tag
 
-Discovery is expected to happen when publisher puts number of `<link>` tags in the head of their webpage:
+Automatic discovery starts when publisher puts a number of `<link>` tags in the `head` of their webpage:
 
-    <link rel="iframely player"                        // intended list of use cases
-    type="text/html"                                   // embed as iFrame
-    href="//iframe.ly/bFbn"                            // with this src
-    media="(min-width:100) and (min-height:100)"       // when these sizes are ok
-    title="Open Web FTW!" />
+    <link rel="iframely player"                          // list of functional use cases
+          type="text/html"                               // guides to embed as iFrame
+          href="//iframe.ly/bFbn"                        // with this src
+          media="(min-width:100) and (min-height:100)"   // when these sizes are ok
+          title="Open Web FTW!" />
 
-The publisher may specify the number of links, either for various user experience of the same content, or links for multiple contents on the page. 
+Publisher may specify a number of links, either for various user experience options of the same content, or links for multiple pieces of content on the same page. 
 
-The consumer (maybe with user's explicit choice) selects what links to use, given the other users' technological and functional context.
+Consumer (perhaps with user's explicit choice) selects what link to use, given the other viewers' environment (e.g. device, screen resolutions, etc) and functional context (e.g. "media library", "Feed reader", etc). 
 
-## Example of embed code
-The above link on the publisher's web page would be used to generate the following embed code on consumer's site:
+Consumer app transofrms `<link>` information into embed code, based on MIME `type`, `media` queries and `href` source.
+The link above will be transformed into `iframe` embed code:
 
     <iframe src="//iframe.ly/bFbn" width="100%" height="100%"></iframe>
+
+
+
+## Quick Example - Coub Viral Videos
+
+Quick example. Publisher, for example [Coub](http://coub.com) adds the following `player` link to the head of [web page](http://coub.com/view/2pc24rpb):
+
+    <link rel="iframely player" href="https://coub.com/embed/2pc24rpb" type="text/html" 
+     title="PARADISE BEACH"  media="(aspect-ratio: 1280:720)"/>
+
+
+Consumer, for example [Realtidbits](http://realtidbits.com/), detects the link, sees that it requires iFrame responsive embed with aspect-ratio of  1280/720. 
+
+Consumer generates the following embed code for it (see [Creating Intrinsic Ratios for Video](http://alistapart.com/article/creating-intrinsic-ratios-for-video) by Thierry Koblentz):
+
+	<div style="left: 0px; width: 100%; height: 0px; position: relative; padding-bottom: 56%;">
+		<iframe src="http://coub.com/embed/2pc24rpb" 
+		frameborder="0" style="top: 0px; left: 0px; width: 100%; height: 100%; position: absolute;">
+		</iframe>
+	</div>
+
+
+The user sees:
+<div style="left: 0px; width: 100%; height: 0px; position: relative; padding-bottom: 56%;">
+<iframe src="http://coub.com/embed/2pc24rpb" frameborder="0" style="top: 0px; left: 0px; width: 100%; height: 100%; position: absolute;"></iframe>
+</div>
+
 
 ## `rel`
 The supported use cases of published widget shall be listed in `rel` attributes, separated by a space, in no specific order.

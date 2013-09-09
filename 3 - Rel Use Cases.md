@@ -1,6 +1,6 @@
 # Iframely Rel Use Cases
 
-    <link rel="player"                                 // intended list of use cases
+    <link rel="player"                                 // list of functional use cases
     type="text/html"                                   // embed as iFrame
     href="//iframe.ly/bFbn"                            // with this src
     media="(min-width:100) and (min-height:100)"       // when these sizes are ok
@@ -37,16 +37,6 @@ they would request that `twitter` and `facebook` to be added to rels list explic
 
 `player` rel is for media playback experiences and cover video, audio and presentation-type widgets. 
 
-The general requirements and recommendations for players are similar to 
-[Twitter Player Card](https://dev.twitter.com/docs/cards/types/player-card) with some flexibility:
-
- - The best user experience is the responsive widgets with only aspect ratio defined: `media="aspect-ratio: 4:3"`
- - Publishers can specify iframe widgets (`type="text/html"`), Flash (`application/x-shockwave-flash:`), or any of `video/...` or `audio/...` MIME types, but are encouraged to provide multiple links if they support multiple formats so that consumers may choose for user's device and network characteristics.
- - Publishers should add `autoplay` value to the `rel` list, if their widget starts the media playback on load of the widget. 
- - Publishers should add `mature` value to the `rel` list, if the widget contains mature subject matter.
- - The use of HTTPS is optional (yet recommended for better distribution). However, when source widget is hosted under HTTPS URI, the requirements are the same as for Twitter Player Card.
-
- 
 Example of [Coub](http://coub.com) publishing [player](http://coub.com/view/2pc24rpb):
 
     <link rel="iframely player" href="https://coub.com/embed/2pc24rpb" type="text/html" 
@@ -55,8 +45,17 @@ Example of [Coub](http://coub.com) publishing [player](http://coub.com/view/2pc2
     <link rel="iframely player autoplay" href="http://c-cdn.coub.com/fb-player.swf?coubID=2pc24rpb" 
      type="application/x-shockwave-flash" title="PARADISE BEACH"  media="(aspect-ratio: 1280:720)"/>
     
-
 [Preview the widget](http://iframe.ly/bF9Z).
+
+
+The general requirements and recommendations for players are similar to 
+[Twitter Player Card](https://dev.twitter.com/docs/cards/types/player-card) with some flexibility:
+
+ - The best user experience is the responsive widgets with only aspect ratio defined: `media="aspect-ratio: 4:3"`
+ - Publishers can specify iframe widgets (`type="text/html"`), Flash (`application/x-shockwave-flash:`), or any of `video/...` or `audio/...` MIME types, but are encouraged to provide multiple links if they support multiple formats so that consumers may choose for user's device and network characteristics.
+ - Publishers should add `autoplay` value to the `rel` list, if their widget starts the media playback on load of the widget. 
+ - Publishers should add `mature` value to the `rel` list, if the widget contains mature subject matter.
+ - The use of HTTPS is optional (yet recommended for better distribution). However, when source widget is hosted under HTTPS URI, the requirements are the same as for Twitter Player Card.
 
 
 ## `image`

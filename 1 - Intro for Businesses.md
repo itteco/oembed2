@@ -1,4 +1,4 @@
-# Iframely intro for Businesses
+# Iframely Intro for Businesses - Control What You Publish
 
 ## The Cause
 
