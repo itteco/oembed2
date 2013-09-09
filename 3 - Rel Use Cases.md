@@ -34,7 +34,7 @@ they would request that `twitter` and `facebook` to be added to rels list explic
 
 
 
-## `player`
+## Player
 
 `player` rel is for media playback experiences and cover video, audio and presentation-type widgets. 
 
@@ -59,7 +59,7 @@ The general requirements and recommendations for players are similar to
 
 
 
-## `image`
+## Image
 
 `image` is for photos, illustrations and inforgraphics and similar graphical content.
 
@@ -73,7 +73,7 @@ However, it is expected that other MIME types be required in near future. (See h
 
 
 
-## `reader`
+## Reader
 
 General text and articles should be published with `rel="reader"`. Readers can be coupled with either `text/html` (iFrame) or `application/javascript` MIME types.
 
@@ -89,7 +89,7 @@ Example:
 If reader is given as JavaScript, it should support rendering inside apps with one-page approach. See [MIME Types](http://iframely.com/oembed2/types) for instructions and best practices.
 
 
-## `survey`
+## Survey
 
 `survey` rel is for widgets asking user's opinion. 
 
@@ -107,7 +107,7 @@ Example of [SlimSurveys](http://slimsurveys.com) publishing [survey](https://sli
 
 
 
-## `thumbnail`
+## Thumbnail
 
 Thumbnail images are the most popular among consumers and are used as a quick visual preview of the main content on publisher's page.
 
@@ -122,7 +122,7 @@ should be accompanied with `sizes` attribute to make it easier for consumers to 
 
 
 
-## `logo`
+## Logo
 
 Logo is given by publishers so that consumers may attribute a web link back to the original site. 
 
@@ -138,7 +138,7 @@ Here's [GitHub](https://github.com/) example:
 
     
 
-## `icon`
+## Icon
 
 Favicons are used to visually attribute the content to the publisher's webpage. 
 They are usually used by consumers in junction with `href` containing the title of the page, or the publisher's site name.
