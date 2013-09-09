@@ -24,7 +24,7 @@ We suggest that all new `rels` and MIME `types` first go via discussion in a tic
 
 
 
-## Acknoledgements
+## Acknowledgements 
 
 The ideas for Iframely protocol were influenced by these publications since we started in Febuary 2012:
 
