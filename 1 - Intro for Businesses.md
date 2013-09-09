@@ -1,16 +1,17 @@
-# Iframely Intro for Businesses - Control What You Publish
+# Iframely for Businesses - Control What You Publish, Choose What You Consume
 
-## The Cause
+## The Cause for Open Web
 
 The purpose of Iframely protocol is to help open web take the next step by making it possible 
-for the web content to follow user from website to website. 
+for web content to follow user from website to website. 
 
-A person sees and likes content on one site, which publishes that content as embed widgets.  
-A person shares its canonical URL on the other site. That site presents embeds, so that 
-community can consume main content quickly and easily, without going to the actual URL. 
+- A person sees and likes content on one site, which publishes that content as embed widgets.  
+- A person shares its canonical URL on the other site. 
+- That site presents embeds, so that community can consume main content quickly and easily, without going to the actual URL. 
 
 The protocol makes the experience more smooth and engaging for all users 
-and it introduces a new web particle, namely content widget. 
+and it institutionalizes a new web particle, namely content widget. 
+
 As consequence, it facilitates wide range of social apps and platforms to become 
 a new web browser for the content-only frames.
 
@@ -21,16 +22,34 @@ or devices the users opted to communicate on.
 Inspired by [John Borthwick's article on Open Web](http://www.businessinsider.com/how-to-save-the-internet-2009-11). 
 
 
+
 ## The Business Case
 
 There are three main business models around content at the moment. 
 
-First monetizes the timeline of a user (e.g. ads on a news site, or promoted statuses on Facebook or Twitter).
-Second monetizes the content itself (e.g. in-video ads by YouTube, or in-article ads on a blog, 
+- First monetizes the timeline of a user (e.g. ads on a news site, or promoted statuses on Facebook or Twitter).
+- Second monetizes the content itself (e.g. in-video ads by YouTube, or in-article ads on a blog, 
 or even sponsored search results by Google).
-
-The third is supplementary services, helping the first two monetization options. For example 
+- The third is supplementary services, helping the first two monetization options. For example 
 real-time analytics for better the content aggregation or editing and hosting tools for the media itself.
+
+So, really, just two models: publishers tend to monetize on content views itself, whereas social apps monetize on timeline and aggregation.
+
+Both Publisher and Consumer need each other to support their business models. Publishers need better distribution for the content from Consumers, whereas Consumers need content from Publishers to better engage social activity of their communities.
+
+And both would want user's attention, and so love-hate battle continues. This benefits bigger players, who have better leverage over the market, leaving the long tail of niche or brand-new players struggling. 
+
+Iframely protocol changes it, by making a clear definition of responsibilities: 
+- Publisher always hosts and controls the content. They announce what they have to offer to consumers.
+- Consumer is the one to choose and proxy the user experience to the audience.
+
+You can think of Iframely protocol's business case as of a fair way to split an apple in half: first party cuts an apple into two pieces, then the second one chooses its piece.
+
+[Read the spec](http://iframely.com/oembed2)
+
+
+
+## Good Citezen Policy
 
 As content and consumer platforms get more distinct separation in their business models, 
 it is worth to introduce a "good citizen" policy and business etiquette.
@@ -41,36 +60,42 @@ and not against each other in order to solicit a customer.
 
 Never should it be acceptable to undermine user experience instead of providing value.
 
+(The worst case we met so far were couple Open-Graph publishers, who re-direct user from current page to their homepage inside the Flash player widgets)
+
 Iframely protocol's focus on specifying embeds use cases will help publisher and consumer 
 to find a balance between viral distribution versus acquiring and retaining customers.
 
-[Read the full spec](http://iframely.com/oembed2)
+[Read the spec](http://iframely.com/oembed2)
+
 
 
 ## The oEmbed/2
 
-The protocol's roots are in oEmbed v1, published in 2008. 
+The protocol's roots are in [oEmbed v1](http://oembed.com), published in 2008. 
 
 The working title for the new protocol was "oEmbed/2" (read as "oEmbed two" or "half oEmbed"), 
 as it keeps simplicity of embeds discovery, while reducing the complexity of implementation by half. 
 
-The protocol leaves semantic data out of scope, as other semantic protocols such as 
-Open Graph (and RDFa approach in general) cover it and have clearly gone mainstream.
-
-`iframely` is the official name of the released protocol, a noun and an adverb hinting the way 
-how embeds are being transferred from one web page to another (e.g. "via iFrame").
-
-The protocol's primarily focus is on user experience and technical aspects of publishing 
+oEmbed is primarily a protocol for API, whereas our protocol's primarily focus is on user experience and technical aspects of publishing 
 and consuming widgets on the web in current realities (HTML5, CSS3, HTTP1.1).
 
-[Read the full spec](http://iframely.com/oembed2)
+The protocol leaves semantic data out of scope, as other semantic protocols such as 
+[Open Graph](http://ogp.me) (and RDFa approach in general) cover it and have clearly gone mainstream.
+
+`Iframely` is the official name of the released protocol, a noun and an adverb hinting the way 
+how embeds are being transferred from one web page to another (e.g. "via iFrame").
+
+If you have an existing embed codes, you are most likely to be able to publish it in just under 10 mins of your time.
+
+[Read the spec](http://iframely.com/oembed2)
+
 
 
 ## QA & Whitelist
 
 During [Itteco](http://itteco.com)'s research and development effort with existing embeds and semantic protocols, 
 we got a clear indication that the lack of centralized Quality Assurance for embeds is what is 
-holding its progress. 
+holding its progress.
 
 There are technical/security considerations that can be resolved algorithmically, but it really 
 requires a human eye to see if the user experience of the embeds can be relied on. 
