@@ -11,8 +11,8 @@ Please, feel free to [fork this document](https://github.com/itteco/oembed2) on 
 We suggest that all new `rels` and MIME `types` first go via discussion in a ticket.
 
 ## Useful links
- -  [Iframely the Embeds Gateway](http://iframely.com/gateway) - provides single self-hosted API endpoint to consume iframely, oEmbed, Twitter Cards and Open Graph protocols.
- -  [Iframely Embeds QA Whitelist](http://iframely.com/qa) - providers independent quality data for domains implementing iframely, oEmbed, Twitter Cards and Open Graph 
+ -  [Iframely the Embeds Gateway](http://iframely.com/gateway) - provides single self-hosted API endpoint to consume Iframely, oEmbed, Twitter Cards and Open Graph protocols.
+ -  [Iframely Embeds QA Whitelist](http://iframely.com/qa) - providers independent quality data for domains implementing Iframely, oEmbed, Twitter Cards and Open Graph 
  -  [Iframely Debug Tool](http://iframely.com/debug) - debugs 4 embeds protocols
 
 # Authors & License

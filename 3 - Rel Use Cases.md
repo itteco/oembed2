@@ -1,19 +1,19 @@
-# Iframely Rel Use Cases
-
-    <link rel="player"                                 // list of functional use cases
-    type="text/html"                                   // embed as iFrame
-    href="//iframe.ly/bFbn"                            // with this src
-    media="(min-width:100) and (min-height:100)"       // when these sizes are ok
-    title="Open Web FTW!" />
-
+# List Widget's Functional Use Cases in REL Attribute
 
 The `rel` attribute of a link under [Iframely Protocol](http://iframely.com/oembed2) contains 
 an array of supported use cases, implemented by the publisher.
 
+    <link rel="iframely player"                          // list of functional use cases
+          type="text/html"                               // guides to embed as iFrame
+          href="//iframe.ly/bFbn"                        // with this src
+          media="(min-width:100) and (min-height:100)"   // when these sizes are ok
+          title="Open Web FTW!" />
+
 The initial dictionary for possible `rel` values as well as a process to extend it are given below.
 
 
-## Generic destination `rel` & `iframely`
+
+## Destination rel & `iframely`
 
 `rel` primarily reflects the user experience, but may also indicate supplementary information, 
 such as the platform a widget is published for.
@@ -33,6 +33,7 @@ For example, if Twitter or Facebook, choose to consume widgets in Iframely spec,
 they would request that `twitter` and `facebook` to be added to rels list explicitly.
 
 
+
 ## `player`
 
 `player` rel is for media playback experiences and cover video, audio and presentation-type widgets. 
@@ -47,15 +48,15 @@ Example of [Coub](http://coub.com) publishing [player](http://coub.com/view/2pc2
     
 [Preview the widget](http://iframe.ly/bF9Z).
 
-
 The general requirements and recommendations for players are similar to 
 [Twitter Player Card](https://dev.twitter.com/docs/cards/types/player-card) with some flexibility:
 
- - The best user experience is the responsive widgets with only aspect ratio defined: `media="aspect-ratio: 4:3"`
- - Publishers can specify iframe widgets (`type="text/html"`), Flash (`application/x-shockwave-flash:`), or any of `video/...` or `audio/...` MIME types, but are encouraged to provide multiple links if they support multiple formats so that consumers may choose for user's device and network characteristics.
- - Publishers should add `autoplay` value to the `rel` list, if their widget starts the media playback on load of the widget. 
- - Publishers should add `mature` value to the `rel` list, if the widget contains mature subject matter.
- - The use of HTTPS is optional (yet recommended for better distribution). However, when source widget is hosted under HTTPS URI, the requirements are the same as for Twitter Player Card.
+- The best user experience is the responsive widgets with only aspect ratio defined: `media="aspect-ratio: 4:3"`
+- Publishers can specify iframe widgets (`type="text/html"`), Flash (`application/x-shockwave-flash:`), or any of `video/...` or `audio/...` MIME types, but are encouraged to provide multiple links if they support multiple formats so that consumers may choose for user's device and network characteristics.
+- Publishers should add `autoplay` value to the `rel` list, if their widget starts the media playback on load of the widget. 
+- Publishers should add `mature` value to the `rel` list, if the widget contains mature subject matter.
+- The use of HTTPS is optional (yet recommended for better distribution). However, when source widget is hosted under HTTPS URI, the requirements are the same as for Twitter Player Card.
+
 
 
 ## `image`
@@ -71,8 +72,21 @@ Initially, the `image` should be accompanied by `image/..` MIME type and `sizes`
 However, it is expected that other MIME types be required in near future. (See how to extend below).
 
 
+
 ## `reader`
 
+General text and articles should be published with `rel="reader"`. Readers can be coupled with either `text/html` (iFrame) or `application/javascript` MIME types.
+
+If reader widget inherits CSS styles from the parent document where it is embedded, it must add rel `inline`. The readers with such tag should not include title or cover image, and are meant to be a native extension of the application their are shown at (i.e. content-only embeds)
+
+Example:
+
+    <link rel="iframely reader inline" type="application/javascript"
+          href="http://iframely.com/reader.js?uri=http%3A%2F%2Fiframely.com%2Foembed2" 
+          title="Iframely oEmbed/2 Spec"/> 
+
+
+If reader is given as JavaScript, it should support rendering inside apps with one-page approach. See [MIME Types](http://iframely.com/oembed2/types) for instructions and best practices.
 
 
 ## `survey`
@@ -80,6 +94,7 @@ However, it is expected that other MIME types be required in near future. (See h
 `survey` rel is for widgets asking user's opinion. 
 
 The questionnaire should give sufficient context and load in a widget step-by-step so that user can spend as little time on answering the poll.
+
 
 
 Example of [SlimSurveys](http://slimsurveys.com) publishing [survey](https://slimsurveys.com/s/eff75e32):
@@ -91,6 +106,7 @@ Example of [SlimSurveys](http://slimsurveys.com) publishing [survey](https://sli
 [Preview the widget](http://iframe.ly/bFsC).
 
 
+
 ## `thumbnail`
 
 Thumbnail images are the most popular among consumers and are used as a quick visual preview of the main content on publisher's page.
@@ -99,6 +115,11 @@ Publishers are encouraged to provide multiple `thumbnail` links, with varying im
 
 `thumbnail` should be used along `image/...` subset of MIME types and 
 should be accompanied with `sizes` attribute to make it easier for consumers to choose which thumbnail to present to the user, given the device and network characteristics. 
+
+    <link rel="iframely thumbnail" sizes="800x500" type="image/jpeg"
+          href="http://nowork.fm/r/ver-0-1-12/img/inbox.jpg" 
+          title="Simple Intranet for Your Team"/> 
+
 
 
 ## `logo`
@@ -112,8 +133,9 @@ so transparent logo background should be used), and should make their logo text 
 
 Here's [GitHub](https://github.com/) example:
 
-    <link rel="logo" type="image/svg" 
+    <link rel="logo" type="image/svg" title="GitHub"
     href="https://github-media-downloads.s3.amazonaws.com/github-logo.svg" />
+
     
 
 ## `icon`
@@ -131,10 +153,11 @@ Please, note that as of [HTML5](http://www.w3schools.com/tags/att_link_sizes.asp
     <link rel="icon" href="icon.svg" sizes="any" type="image/svg+xml">
 
 
+
 ## Extending the dictionary
 
-Iframely protocol is fairly flexible and extendible as to additional use cases, 
-thanks to the fact that `rel` attribute may contain a list of values.
+Iframely protocol is by-design flexible and extendible as to additional use cases, 
+due to the fact that `rel` attribute may contain a list of values.
 
 Please, feel free to [fork this spec on Github](http://github.com/itteco/oembed2) and pull-request additional values, describing the requirements for the user experience. 
 
@@ -147,8 +170,3 @@ For example, here are some of use cases that we see the need for community to ta
  - `responsive` for `image`. The good coverage on the topic is [provided here](http://css-tricks.com/which-responsive-images-solution-should-you-use/).
 
 Please, note that `mobile` versus `desktop` are not envisioned to be part of the `rel` in the future, but rather be put into `media` part of the link tag.
-
-
-
-
-

@@ -107,6 +107,6 @@ leaving the long tail of less popular providers struggling to get distribution.
 Facebook and Twitter have their own whitelists for the embeds they consume, but this information isn't public.
 
 Itteco therefore launches [Whitelist DB](http://iframely.com/qa), as the first independently run embeds QA service. 
-We cover iframely, oEmbed v1, Twitter Cards and Open Graph protocols in our test runs. 
+We cover Iframely, oEmbed v1, Twitter Cards and Open Graph protocols in our test runs. 
 
 [Get Whitelist File](http://iframely.com/qa/buy) or [Submit Your Domain](http://iframely.com/qa/request). 
