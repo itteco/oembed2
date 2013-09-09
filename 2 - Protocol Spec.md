@@ -9,6 +9,7 @@ Iframely protocol is simple publishing and discovery method for responsive embed
 Iframely protocol does not compete with specs of [oEmbed](http://oembed.com), [Open Graph](http://opg.me) or [Twitter Cards](http://https://dev.twitter.com/docs/cards), but rather supplements them, as it only focuses on User Experience and not on semantic data. 
 
 This is how it works:
+
 - Content Publisher puts available widgets as `<link>` tag in the `<head>` section of (X)HTML document. Publisher indicates MIME type of a hosted resource, sizing options and what are the expected use cases. 
 - Consumer selects the widgets that work for the user's environment and app circumstances and presents it to the user. 
 
@@ -70,6 +71,7 @@ Voilà! User sees (try re-sizing your browser's window):
 The supported use cases of a published widget should be listed in `rel` attribute, separated by a space, in no specific order.
 
 The initial dictionary of the use cases is listed in [Rel Types](http://iframely.com/oembed2/rels) section and includes:
+
 - `iframely` 
 - `player` 
 - `reader`
@@ -102,6 +104,7 @@ The method that needs to be used for embedding of a widget, is given as MIME typ
 For example, `text/html` indicates that widget needs to be embedded as `<iframe>`. 
 
 Can also be:
+
 - `javascript`
 - `image`
 - `video` and `audio` embeds.
