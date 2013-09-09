@@ -1,4 +1,4 @@
-# Iframely for Businesses - Control What You Publish, Choose What You Consume
+# Control What You Publish, Choose What You Consume
 
 ## The Cause for Open Web
 
