@@ -39,7 +39,8 @@ Both Publisher and Consumer need each other to support their business models. Pu
 
 And both would want user's attention, and so love-hate battle continues. This benefits bigger players, who have better leverage over the market, leaving the long tail of niche or brand-new players struggling. 
 
-Iframely protocol changes it, by making a clear definition of responsibilities: 
+Iframely protocol changes it, by making a clear definition of responsibilities:
+
 - Publisher always hosts and controls the content. They announce what they have to offer to consumers.
 - Consumer is the one to choose and proxy the user experience to the audience.
 
