@@ -1,14 +1,14 @@
 # Iframely Protocol for Responsive Embeds
 
-Iframely protocol is simple publishing and discovery method for responsive embeds of web content. 
+Iframely protocol is simple embeds content publishing and discovery method that is naturally interpreted into responsive widget embed code by developers of consuming application.
 
-- Content widgets are always hosted and controled by Publisher. 
-- Consumer app interprets and presents embeds to User, giving the experience circumstances. 
-- This clear separation of responsibilities balances Publisher and Consumer objectives. It forces them to work together to provide best user experience to their shared audience. See [Business Intro](http://iframely.com/oembed2/intro).
+Content publisher announces what widgets are available on a web page, in which format and which sizes and what are the expected use cases. Content consumer selects the widgets that work for the user's environment and presents it to the user.
+
+Thus, the widgets are always hosted by a publisher, yet interpreted by consumer. This forces parties to put their best effort to collaborate on acceptable user experience for their shared audience. See [Business Intro](http://iframely.com/oembed2/intro).
 
 Iframely protocol does not compete with specs of [oEmbed](http://oembed.com), [Open Graph](http://opg.me) or [Twitter Cards](http://https://dev.twitter.com/docs/cards), but rather supplements them, as it only focuses on User Experience and not on semantic data. 
 
-This is how it works:
+__This is how it works:__
 
 - Content Publisher puts available widgets as `<link>` tag in the `<head>` section of (X)HTML document. Publisher indicates MIME type of a hosted resource, sizing options and what are the expected use cases. 
 - Consumer selects the widgets that work for the user's environment and app circumstances and presents it to the user. 
