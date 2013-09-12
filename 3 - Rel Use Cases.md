@@ -100,8 +100,8 @@ The questionnaire should give sufficient context and load in a widget step-by-st
 Example of [SlimSurveys](http://slimsurveys.com) publishing [survey](https://slimsurveys.com/s/eff75e32):
 
     <link rel="iframely survey" type="text/html" 
-    href="https://slimsurveys.com/survey/eff75e32/embed" 
-    media="(height: 250px) and (width: 300px)" title="UrbanEscape" />
+          href="https://slimsurveys.com/survey/eff75e32/embed" 
+          media="(height: 250px) and (width: 300px)" title="UrbanEscape" />
 
 [Preview the widget](http://iframe.ly/bFsC).
 
