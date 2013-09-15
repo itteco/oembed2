@@ -87,4 +87,44 @@ Embed code:
 
 # Wrapping `iframe` and `video` tags to use `aspect-ratio`, `min-width` and `max-width` media query attributes
 
-...
+Wrapper implementation could be found at https://github.com/itteco/iframely/blob/master/static/js/iframely.js
+
+Lets assume our `iframe` or `video` tag called `element`. Specific attributes like `src` or `frameborder` will be skipped as obvious.
+
+`media` - is `link.media` attribute.
+
+## Fixed `width` and `height` case
+
+	<!-- Just element itself with size. -->
+    <element style="width: media.width;
+    				height: media.height;" />
+
+## Responsive size with `aspect-ratio` case.
+
+	<!-- Responsive container. -->
+	<div style="left: 0;
+				width: 100%;
+				height: 0;
+				position: relative;
+				padding-top: 100*media['aspect-ratio']%">
+
+		<!-- Element with 100% size. -->
+		<element style="top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						position: absolute;" />
+	</div>
+
+## `max-width` and `min-width` cases.
+
+To limit container size from previous responsive case it must be wrapped with simple `<div>`:
+
+	<!-- Size constraint container. -->
+	<div style="min-width: media['min-width'];
+				max-width: media['max-width'];">
+
+				<!-- Responsive container here. -->
+	</div>
+
+Using 'max-height' or 'min-height' not supported by this method.
