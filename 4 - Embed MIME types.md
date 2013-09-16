@@ -73,19 +73,19 @@ Here is step by step event flow:
 
 1. Parent window embeds iframe and tells it its `ID` via message containing `windowId`:
 
-	iframeElement.contentWindow.postMessage({method: "register", windowId: {ID}}, '*');
+		iframeElement.contentWindow.postMessage({method: "register", windowId: {ID} }, '*');
 
 2. Child iframe listens for the event and keeps `windowId` value as its caller id:
 
-	window.addEventListener('message', function(e) {
-		if (e.data.method == "register") {
-            windowId = e.data.windowId;
-        }
-	});
+		window.addEventListener('message', function(e) {
+			if (e.data.method == "register") {
+	            windowId = e.data.windowId;
+	        }
+		});
 
 3. When child iframe is done loading the content and knows its exact size, it sends up it to the parent window:
 
-	window.parent.postMessage({method: "resize", windowId: {ID}, height: {HEIGHT}}}, '*');
+		window.parent.postMessage({method: "resize", windowId: {ID}, height: {HEIGHT} }, '*');
 
 4. Parent window receives new iframe size and adjusts the sizes of iframe container.
 
@@ -107,13 +107,7 @@ For performance purposes, Publishers are encouraged to implement ["Dynamic Async
 
 ## Media Embeds
 
-For MIME types:
-
- - video/mp4
- - video/webm
- - video/ogg
-
-Generated embed code is:
+Generated embed code for MIME types `video/mp4`, `video/webm` and `video/ogg` is:
 
  	<video
  		controls
@@ -124,7 +118,7 @@ Generated embed code is:
 				type="{LINK.TYPE}}" />
  	</video>
 
-Where `{THUMBNAIL.HREF}}` - link to thumbnail image with the same aspect-ratio if it is available.
+Where `{THUMBNAIL.HREF}` - link to thumbnail image with the same aspect-ratio if it is available.
 
 The sizing tricks are the same for iFrame embeds above.
 
