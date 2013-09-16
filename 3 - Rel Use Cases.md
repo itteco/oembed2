@@ -41,10 +41,11 @@ they would request that `twitter` and `facebook` to be added to rels list explic
 Example of [Coub](http://coub.com) publishing [player](http://coub.com/view/2pc24rpb):
 
     <link rel="iframely player" href="https://coub.com/embed/2pc24rpb" type="text/html" 
-     title="PARADISE BEACH"  media="(aspect-ratio: 1280:720)"/>
+          title="PARADISE BEACH"  media="(aspect-ratio: 1280:720)"/>
     
-    <link rel="iframely player autoplay" href="http://c-cdn.coub.com/fb-player.swf?coubID=2pc24rpb" 
-     type="application/x-shockwave-flash" title="PARADISE BEACH"  media="(aspect-ratio: 1280:720)"/>
+    <link rel="iframely player autoplay" type="application/x-shockwave-flash"
+          href="http://c-cdn.coub.com/fb-player.swf?coubID=2pc24rpb"
+          title="PARADISE BEACH"  media="(aspect-ratio: 1280:720)"/>
     
 [Preview the widget](http://iframe.ly/bF9Z).
 
