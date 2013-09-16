@@ -145,19 +145,22 @@ Embed code for MIME type `application/javascript` will look like:
 
 Please, note that `text/javascript` MIME type is obsolete now.
 
+The rendering of the embed widget should occur right after `<script>` tag. It would mean using `document.write` inside the javascript. This approach only works when the HTML code is generated on the server-side, and so the embedded javascript loads with the entire page.
 
 
-Rendering scenarios:
+It is not friendly for consumers who generate the page contents dynamically on the client-side. 
+To make javascript embeds work for apps that render on the client side, a different solution needs to take place.
 
-1. By default: exactly after script tag.
+Publish the embed link with `id` tag included:
 
-2. In specific container only if it exists:
+    <link rel="..." href="..."
+           id = "{YOUR SERVER PREFIX: ID}"
+	       type="application/javascript" />
 
-	<div iframely-container-for="link.href"></div>
+The Consumer adds an empty `<div>` with given `id` field, then adds the javascript, which finds the div by id and renders inside it:
 
-Script should work with both static and dynamic embedding.
+    <div id="{YOUR SERVER PREFIX: ID}"></div>
 
-After script finished render event on widget's parent element `iframely.loaded` should occur.
 
 
 
