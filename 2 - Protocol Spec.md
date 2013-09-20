@@ -6,7 +6,7 @@ Content publisher announces what widgets are available on a web page, in which f
 
 Thus, the widgets are always hosted by a publisher, yet interpreted by consumer. This forces parties to put their best effort to collaborate on acceptable user experience for their shared audience. See [Business Intro](http://iframely.com/oembed2/intro).
 
-Iframely protocol does not compete with specs of [oEmbed](http://oembed.com), [Open Graph](http://opg.me) or [Twitter Cards](http://https://dev.twitter.com/docs/cards), but rather supplements them, as it only focuses on User Experience and not on semantic data. 
+Iframely protocol does not compete with specs of [oEmbed](http://oembed.com), [Open Graph](http://ogp.me) or [Twitter Cards](https://dev.twitter.com/docs/cards), but rather supplements them, as it only focuses on User Experience and not on semantic data. 
 
 __This is how it works:__
 
