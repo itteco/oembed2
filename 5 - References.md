@@ -21,6 +21,7 @@ We suggest that all new `rels` and MIME `types` first go via discussion in a tic
 - [Iframely Embeds QA Whitelist](http://iframely.com/qa) - independent quality data for domains implementing Iframely protocol, oEmbed, Twitter Cards and Open Graph.
 - [Iframely Debug Tool](http://iframely.com/debug) - debugs 4 embeds protocols. Also a [Chrome extension](https://chrome.google.com/webstore/detail/iframely-semantic-url-deb/lhemgegopokbfknihjcefbaamgoojfjf).
 - [iframe.ly](http://iframe.ly) - the demo app. As both consumer and publisher.
+- [Iframely for Gmail](https://chrome.google.com/webstore/detail/iframely-for-gmail/bbafbcjnlgfbemjemgliogmfdlkocjmi) - watch videos, view photos and read articles in your inbox.
 
 
 
