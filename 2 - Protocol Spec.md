@@ -60,9 +60,10 @@ Consumer generates the following embed code for it (see [Creating Intrinsic Rati
 
 
 Voilà! User sees:
-<div style="left: 0px; width: 100%; height: 0px; position: relative; padding-bottom: 56%;">
-<iframe src="http://coub.com/embed/2pc24rpb" frameborder="0" style="top: 0px; left: 0px; width: 100%; height: 100%; position: absolute;"></iframe>
+<div style="width: 100%; height: 0px; position: relative; padding-bottom: 56%;">
+<iframe src="http://coub.com/embed/2pc24rpb" frameborder="0" style="width: 100%; height: 100%; position: absolute;"></iframe>
 </div>
+
 <p></p>
 
 
@@ -151,3 +152,6 @@ However, if the `link` represents the same content but with different variations
 it is expected that such multiple links would share the same `title`.
 
 If `tittle` attribute is omitted, the title should be taken from Open Graph `og:title` value or the value of  `<title>...</title>` HTML tag on the web page.
+
+
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Iframely Protocol</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://iframely.com/" property="cc:attributionName" rel="cc:attributionURL">Itteco</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 License</a>.
