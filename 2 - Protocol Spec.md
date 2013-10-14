@@ -52,18 +52,16 @@ Consumer, for example [Realtidbits](http://realtidbits.com/), detects the link, 
 
 Consumer generates the following embed code for it (see [Creating Intrinsic Ratios for Video](http://alistapart.com/article/creating-intrinsic-ratios-for-video) by Thierry Koblentz):
 
-	<div style="left: 0px; width: 100%; height: 0px; position: relative; padding-bottom: 56%;">
-		<iframe src="http://coub.com/embed/2pc24rpb" frameborder="0" 
-    style="top: 0px; left: 0px; width: 100%; height: 100%; position: absolute;">
-		</iframe>
-	</div>
-
+    <div style="width: 100%; height: 0px; position: relative; padding-bottom: 56%;">
+      <iframe src="http://coub.com/embed/2pc24rpb" frameborder="0" 
+      style="width: 100%; height: 100%; position: absolute;">
+      </iframe>
+    </div>
 
 Voilà! User sees:
-<div style="width: 100%; height: 0px; position: relative; padding-bottom: 56%;">
-<iframe src="http://coub.com/embed/2pc24rpb" frameborder="0" style="width: 100%; height: 100%; position: absolute;"></iframe>
+<div style="left: 0px; width: 100%; height: 0px; position: relative; padding-bottom: 56%;">
+<iframe src="http://coub.com/embed/2pc24rpb" frameborder="0" style="top: 0px; left: 0px; width: 100%; height: 100%; position: absolute;"></iframe>
 </div>
-
 <p></p>
 
 
