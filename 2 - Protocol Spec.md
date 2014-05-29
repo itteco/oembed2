@@ -6,7 +6,7 @@ Content publisher announces what widgets are available on a web page, in which f
 
 Thus, the widgets are always hosted by a publisher, yet interpreted by consumer. This forces parties to put their best effort to collaborate on acceptable user experience for their shared audience. See [Business Intro](http://iframely.com/oembed2/intro).
 
-Iframely protocol does not compete with specs of [oEmbed](http://oembed.com), [Open Graph](http://opg.me) or [Twitter Cards](http://https://dev.twitter.com/docs/cards), but rather supplements them, as it only focuses on User Experience and not on semantic data. 
+Iframely protocol does not compete with specs of [oEmbed](http://oembed.com), [Open Graph](http://ogp.me) or [Twitter Cards](https://dev.twitter.com/docs/cards), but rather supplements them, as it only focuses on User Experience and not on semantic data. 
 
 __This is how it works:__
 
@@ -52,14 +52,13 @@ Consumer, for example [Realtidbits](http://realtidbits.com/), detects the link, 
 
 Consumer generates the following embed code for it (see [Creating Intrinsic Ratios for Video](http://alistapart.com/article/creating-intrinsic-ratios-for-video) by Thierry Koblentz):
 
-	<div style="left: 0px; width: 100%; height: 0px; position: relative; padding-bottom: 56%;">
-		<iframe src="http://coub.com/embed/2pc24rpb" 
-		frameborder="0" style="top: 0px; left: 0px; width: 100%; height: 100%; position: absolute;">
-		</iframe>
-	</div>
+    <div style="width: 100%; height: 0px; position: relative; padding-bottom: 56%;">
+      <iframe src="http://coub.com/embed/2pc24rpb" frameborder="0" 
+      style="width: 100%; height: 100%; position: absolute;">
+      </iframe>
+    </div>
 
-
-Voilà! User sees (try re-sizing your browser's window):
+Voilà! User sees:
 <div style="left: 0px; width: 100%; height: 0px; position: relative; padding-bottom: 56%;">
 <iframe src="http://coub.com/embed/2pc24rpb" frameborder="0" style="top: 0px; left: 0px; width: 100%; height: 100%; position: absolute;"></iframe>
 </div>
@@ -151,3 +150,6 @@ However, if the `link` represents the same content but with different variations
 it is expected that such multiple links would share the same `title`.
 
 If `tittle` attribute is omitted, the title should be taken from Open Graph `og:title` value or the value of  `<title>...</title>` HTML tag on the web page.
+
+
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Iframely Protocol</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://iframely.com/" property="cc:attributionName" rel="cc:attributionURL">Itteco</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 License</a>.

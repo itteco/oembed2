@@ -21,6 +21,7 @@ We suggest that all new `rels` and MIME `types` first go via discussion in a tic
 - [Iframely Embeds QA Whitelist](http://iframely.com/qa) - independent quality data for domains implementing Iframely protocol, oEmbed, Twitter Cards and Open Graph.
 - [Iframely Debug Tool](http://iframely.com/debug) - debugs 4 embeds protocols. Also a [Chrome extension](https://chrome.google.com/webstore/detail/iframely-semantic-url-deb/lhemgegopokbfknihjcefbaamgoojfjf).
 - [iframe.ly](http://iframe.ly) - the demo app. As both consumer and publisher.
+- [Iframely for Gmail](https://chrome.google.com/webstore/detail/iframely-for-gmail/bbafbcjnlgfbemjemgliogmfdlkocjmi) - watch videos, view photos and read articles in your inbox.
 
 
 
@@ -41,7 +42,7 @@ The following folks and companies helped with feedback and validation of the con
 
 - [Nowork FM](http://nowork.fm) - [Itteco](http://itteco.com)'s simple intranet, we opted to build to immerse ourselves in all requirements of embeds Consumer
 - Anatoly Ivanov built the 3rd reincarnation of [Iframely Open-Source Gateway](http://github.com/itteco/iframely) (we ended up releasing the 4rth incarnation of it)
-- [Mathias Panzenböck](https://github.com/panzi) and his [CrowdRanking](http://crowdranking.com/) was the first publisher under Iframely protocol (even ahead of [us ourselves](http://iframe.ly))
+- [Mathias Panzenböck](https://github.com/panzi) and [Crowdranking](http://crowdranking.com/) were the first publisher under Iframely protocol (even ahead of [us ourselves](http://iframe.ly))
 - [Jon Cianciullo](https://twitter.com/jonnyjon/) helped validate some ideas.
 - [Taras Kuba](https://twitter.com/taraskuba) is our brilliant designer, who added a lot of the design trends vision for future web,
 - Ideas, similar to [Why Cards are the Future of the Web](http://insideintercom.io/why-cards-are-the-future-of-the-web/) by [Paul Adams](https://twitter.com/padday)
@@ -57,6 +58,6 @@ The following folks and companies helped with feedback and validation of the con
 Specifically, these folks from Itteco:
 
 - [Ivan Paramonau](https://twitter.com/iparamonau) - direction, spec & analysis
-- [Nazar Leush](https://github.com/nleus) - all R&D efforts
+- [Nazar Leush](https://github.com/nleush) - all R&D efforts
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Iframely Protocol</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://iframely.com/oembed2" property="cc:attributionName" rel="cc:attributionURL">Itteco Software Corp.</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Iframely Protocol</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://iframely.com/" property="cc:attributionName" rel="cc:attributionURL">Itteco</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 License</a>.

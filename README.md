@@ -19,7 +19,7 @@ __Sample:__
 
 
 
-Iframely protocol does not compete with specs of [oEmbed](http://oembed.com), [Open Graph](http://opg.me) or [Twitter Cards](http://https://dev.twitter.com/docs/cards), but rather supplements them, as it only focuses on User Experience and not on semantic data. 
+Iframely protocol does not compete with specs of [oEmbed](http://oembed.com), [Open Graph](http://ogp.me) or [Twitter Cards](http://https://dev.twitter.com/docs/cards), but rather supplements them, as it only focuses on User Experience and not on semantic data. 
 
 
 The protocol references HTML5/CSS3 and will naturally evolve with those standards from a technical standpoint.
