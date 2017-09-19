@@ -58,7 +58,7 @@ Consumer generates the following embed code for it (see [Creating Intrinsic Rati
 
 Voilà! User sees:
 <div style="left: 0px; width: 100%; height: 0px; position: relative; padding-bottom: 56%;">
-<iframe src="http://coub.com/embed/2pc24rpb" frameborder="0" style="top: 0px; left: 0px; width: 100%; height: 100%; position: absolute;"></iframe>
+<iframe src="//coub.com/embed/2pc24rpb" frameborder="0" style="top: 0px; left: 0px; width: 100%; height: 100%; position: absolute;"></iframe>
 </div>
 <p></p>
 

@@ -10,9 +10,9 @@ When embed is published with MIME type 'text/html', it should be wrapped into th
 
 	<iframe src="link.href" />
 
-For security purposes, we also suggest to wrap into iFrame the embeds published as `application/x-shockwave-flash`.
+For security purposes, we also suggest to wrap into iFrame the embeds published as `application/x-shockwave-flash` if user-agent has Flash plugin installed.
 
-Consumers may opt to specify additional attributes such as for example `frameborder="0"`, `allowFullScreen`, etc. See details on specific cases of responsive media queries in the next sections.
+Consumers specify additional iFrame attributes such as for example `frameborder="0"`, `allowFullScreen`, etc. See details on specific cases of responsive media queries in the next sections.
 
 
 ### Fixed width or height
