@@ -160,16 +160,4 @@ Please, note that as of [HTML5](http://www.w3schools.com/tags/att_link_sizes.asp
 Iframely protocol is by-design flexible and extendible as to additional use cases, 
 due to the fact that `rel` attribute may contain a list of values.
 
-Please, feel free to [fork this spec on Github](http://github.com/itteco/oembed2) and pull-request additional values, describing the requirements for the user experience. 
-
-The discussions of pull-requests may be necessary if there are other providers of similar content that may wish to contribute for the requirements. 
-However, such additional requirements may also be added as an extra `rel` value which will go with the primary one.
-
-For example, here are some of use cases that we see the need for community to take a lead on:
-
- - `playback` - for `player` indicating that widget supports JavaScript or `window.postMessage` API to control media playback. With the list of calls, similar to what [YouTube](https://developers.google.com/youtube/iframe_api_reference#Events), [Vimeo](http://developer.vimeo.com/player/js-api) and [Soundcloud](http://developers.soundcloud.com/docs/api/html5-widget) have. 
- - `responsive` for `image`. The good coverage on the topic is [provided here](http://css-tricks.com/which-responsive-images-solution-should-you-use/).
-
-Please, note that `mobile` versus `desktop` are not envisioned to be part of the `rel` in the future, but rather be put into `media` part of the link tag.
-
-<a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Iframely Protocol</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://iframely.com/" property="cc:attributionName" rel="cc:attributionURL">Itteco</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 License</a>.
+Please, feel free to let us know if you see the need for more.
