@@ -1,12 +1,10 @@
 # Iframely Protocol for Responsive Embeds
 
-Iframely protocol is simple embeds content publishing and discovery method that is naturally interpreted into responsive widget embed code by developers of consuming application.
+Iframely protocol is simple publishing and discovery method for iFrame embedded content that is naturally interpreted into responsive widget embed code by developers of consuming applications.
 
-Content publisher announces what widgets are available on a web page, in which format and which sizes and what are the expected use cases. Content consumer selects the widgets that work for the user's environment and presents it to the user.
+Content publisher announces what media is available on a web page, in which format and sizes and what are the expected use cases. Content consumer apps selects the widgets that work for the user's environment and presents it to the user. Content is always hosted by a publisher, yet interpreted and presented to user by consumer app.
 
-Thus, the widgets are always hosted by a publisher, yet interpreted by consumer. This forces parties to put their best effort to collaborate on acceptable user experience for their shared audience. See [Business Intro](http://iframely.com/oembed2/intro).
-
-Iframely protocol does not compete with specs of [oEmbed](http://oembed.com), [Open Graph](http://ogp.me) or [Twitter Cards](https://dev.twitter.com/docs/cards), but rather supplements them, as it only focuses on User Experience and not on semantic data. 
+Iframely protocol focuses solely on media and User Experience. Unlike [oEmbed](http://oembed.com), [Open Graph](http://ogp.me) or [Twitter Cards](https://dev.twitter.com/docs/cards) or Micro Formats, Iframely protocol does not cover semantic meta data.
 
 __This is how it works:__
 
@@ -27,7 +25,7 @@ Automatic discovery starts when publisher puts a number of `<link>` tags in the 
           type="text/html"                               // guides to embed as iFrame
           href="//iframe.ly/bFbn"                        // with this src
           media="(min-width:100) and (min-height:100)"   // when these sizes are ok
-          title="Open Web FTW!" />
+     />
 
 Publisher may specify a number of links, either for various user experience options of the same content, or links for multiple pieces of content on the same page. 
 
@@ -60,7 +58,7 @@ Consumer generates the following embed code for it (see [Creating Intrinsic Rati
 
 Voilà! User sees:
 <div style="left: 0px; width: 100%; height: 0px; position: relative; padding-bottom: 56%;">
-<iframe src="http://coub.com/embed/2pc24rpb" frameborder="0" style="top: 0px; left: 0px; width: 100%; height: 100%; position: absolute;"></iframe>
+<iframe src="//coub.com/embed/2pc24rpb" frameborder="0" style="top: 0px; left: 0px; width: 100%; height: 100%; position: absolute;"></iframe>
 </div>
 <p></p>
 
@@ -128,7 +126,7 @@ An example of a simple media query is fixed `aspect-ratio`, or anything that rel
 
 
 
-## For Non-Responsive - use `sizes`
+## For fixed-size - use `sizes`
 
 `sizes` attribute can be used instead of `media` for fixed-size embeds: 
 
@@ -138,18 +136,18 @@ See [sizes spec on W3C](http://www.w3schools.com/tags/att_link_sizes.asp). Pleas
 
 
 
-## For Multiple Embeds On The Page - itemize with `title`
+## For fixed- or variable- height iFrames - use `height`
 
-Both Publisher and Consumer should assume that there could potentially be a number of Iframely links/widgets on a page. 
+For horizontal iFrames that need to stretch 100% of the width with fixed height, give only `height` as `media`:
 
-To distinguish between them, publisher must give separate titles for each one.
+    <link rel="iframely app" type="text/html" href="... " media="height: 420"/>
 
-For example, `logo` can have the same title on all pages on your site and be equal to your "Site Name".
 
-However, if the `link` represents the same content but with different variations in use case or media sizes, 
-it is expected that such multiple links would share the same `title`.
+When height is can not be known in advance, for example due to text overflows that depend on user's viewport, there's a simple JavaScripts event flow that both publisher and consumer should implement to communicate height changes and adjust widget accordingly. 
 
-If `tittle` attribute is omitted, the title should be taken from Open Graph `og:title` value or the value of  `<title>...</title>` HTML tag on the web page.
+See [height events](https://iframely.com/oembed2/types#js-events).
+
+
 
 
 <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Iframely Protocol</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://iframely.com/" property="cc:attributionName" rel="cc:attributionURL">Itteco</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 License</a>.

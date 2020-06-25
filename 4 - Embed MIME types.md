@@ -10,12 +10,12 @@ When embed is published with MIME type 'text/html', it should be wrapped into th
 
 	<iframe src="link.href" />
 
-For security purposes, we also suggest to wrap into iFrame the embeds published as `application/x-shockwave-flash`.
+For security purposes, we also suggest to wrap into iFrame the embeds published as `application/x-shockwave-flash` if user-agent has Flash plugin installed.
 
-Consumers may opt to specify additional attributes such as for example `frameborder="0"`, `allowFullScreen`, etc. See details on specific cases of responsive media queries in the next sections.
+Consumers specify additional iFrame attributes such as for example `frameborder="0"`, `allowFullScreen`, etc. See details on specific cases of responsive media queries in the next sections.
 
 
-### Fixed width and height
+### Fixed width or height
 
 The simples case of is when media query of a published embed gives `width` and `height` values explicitly:
 
@@ -63,9 +63,10 @@ This method does not support 'max-height' or 'min-height' however. See next sect
 
 
 
-### Prevent Vertical Scrollbars on `height` - constrained embeds
+## iFrames with unknown height embeds
+<div id="js-events"></div>
 
-Some iFrames  do not have fixed height due to dynamic nature of the content. In such cases. it is required that Publisher and Consumer co-operate to prevent scrollbars to ruin the experience of a user.
+Some iFrames do not have fixed height due to dynamic nature of the content. For example, resizable text widgets, whose height depend on the viewport. In such cases. it is required that Publisher and Consumer co-operate to prevent scrollbars to ruin the experience of a user.
 
 The approach is based on event messaging between the embedded iframe (publisher) and the parent window (consumer app). To prevent showing scrollers, iframe escalates its actual internal size to a parent window. This event occurs dynamically after iframe content loaded and works using `window.postMessage` method.
 
@@ -90,7 +91,7 @@ Here is step by step event flow:
 4. Parent window receives new iframe size and adjusts the sizes of iframe container.
 
 
-The following name convention constitues the spec: 
+The following name convention constitutes the spec: 
 
 - `windowId` and `height` for the parameters
 - `register` and `resize` for the events.
