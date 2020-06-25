@@ -78,7 +78,7 @@ However, it is expected that other MIME types be required in near future. (See h
 
 General text and articles should be published with `rel="reader"`. Readers can be coupled with either `text/html` (iFrame) or `application/javascript` MIME types.
 
-If reader widget inherits CSS styles from the parent document where it is embedded, it must add rel `inline`. The readers with such tag should not include title or cover image, and are meant to be a native extension of the application their are shown at (i.e. content-only embeds)
+If reader widget inherits CSS styles from the parent document where it is embedded, it must add rel `inline`. The readers with such tag should not include title or cover image, and are meant to be a native extension of the application they are shown at (i.e. content-only embeds)
 
 Example:
 

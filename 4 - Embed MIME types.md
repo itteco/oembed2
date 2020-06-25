@@ -91,7 +91,7 @@ Here is step by step event flow:
 4. Parent window receives new iframe size and adjusts the sizes of iframe container.
 
 
-The following name convention constitues the spec: 
+The following name convention constitutes the spec: 
 
 - `windowId` and `height` for the parameters
 - `register` and `resize` for the events.
