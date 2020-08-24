@@ -62,7 +62,7 @@ The general requirements and recommendations for players are similar to
 
 ## Image
 
-`image` is for photos, illustrations and inforgraphics and similar graphical content.
+`image` is for photos, illustrations and infographics and similar graphical content.
 
 The intended use of an `image` is in the photo albums and galleries. It should be a primary content of the original page. 
 

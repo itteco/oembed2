@@ -31,7 +31,7 @@ Publisher may specify a number of links, either for various user experience opti
 
 Consumer (perhaps with user's explicit choice) selects what link to use, given the other viewers' environment (e.g. device, screen resolutions, etc) and functional context (e.g. "media library", "Feed reader", etc). 
 
-Consumer app transofrms `<link>` information into embed code, based on MIME `type`, `media` queries and `href` source.
+Consumer app transforms `<link>` information into embed code, based on MIME `type`, `media` queries and `href` source.
 The link above will be transformed into `iframe` embed code:
 
     <iframe src="//iframe.ly/bFbn" width="100%" height="100%"></iframe>
