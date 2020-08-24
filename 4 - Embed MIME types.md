@@ -17,7 +17,7 @@ Consumers specify additional iFrame attributes such as for example `frameborder=
 
 ### Fixed width or height
 
-The simples case of is when media query of a published embed gives `width` and `height` values explicitly:
+The simplest case of is when media query of a published embed gives `width` and `height` values explicitly:
 
 	<!-- Just iframe itself with proper size -->
     <iframe src="..."  
@@ -192,7 +192,7 @@ It is Publisher's responsibility to handle and present user-friendly error messa
 
 For example, when resource is not available any longer (error 404) or can not be served for user in a specific geographic location, Publisher of a player can show an image instead with the text message clearly stating the reason. For images, it can be a boilerplate image with the error text.
 
-Never should a publisher return HTTP error code on the hosted embed resouce with the empty response body. 
+Never should a publisher return HTTP error code on the hosted embed resource with the empty response body. 
 
 The HTTP errors on widget href location should be identical to the ones user would see if she goes to the original URL on publisher's site. This would help consumer app detect errors (for example `onError` event handler ) and re-fetch the original information from a host's canonical address.
 
